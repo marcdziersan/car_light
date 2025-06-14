@@ -48,14 +48,6 @@ Die Simulation bietet praxisnahe Einblicke in:
 
 ---
 
-## 🖥️ Live-Demo (optional)
-
-> Wenn du die Simulation hostest, verlinke sie hier. Beispiel:
->
-> 🔗 [Live-Demo anzeigen](https://dein-simulator-link.de)
-
----
-
 ## 🚀 Ausblick / Erweiterungsmöglichkeiten
 
 Die Simulation kann flexibel erweitert werden – z. B. durch:
