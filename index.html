@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fahrzeugbeleuchtungssimulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Fahrzeugbeleuchtungssimulation</h1>
+
+<h3>Cockpit Konsole</h3>
+<div id="cockpit">
+  <div class="anzeige" id="anzeige-blinker-links">🔁 Blinker Links</div>
+  <div class="anzeige" id="anzeige-blinker-rechts">🔁 Blinker Rechts</div>
+  <div class="anzeige" id="anzeige-warnblinker">⚠️ Warnblinker</div>
+  <div class="anzeige" id="anzeige-tfl">💡 TFL</div>
+  <div class="anzeige" id="anzeige-abblend">🔆 Abblendlicht</div>
+  <div class="anzeige" id="anzeige-fern">🔦 Fernlicht</div>
+  <div class="anzeige" id="anzeige-nebel">🌫️ Nebelscheinwerfer</div>
+  <div class="anzeige" id="anzeige-innen">🚗 Innenbeleuchtung</div>
+  <div class="anzeige" id="anzeige-kenn-v">🆔 Kennz. vorne</div>
+  <div class="anzeige" id="anzeige-kenn-h">🆔 Kennz. hinten</div>
+  <div class="anzeige" id="anzeige-brems">🛑 Bremslicht</div>
+  <div class="anzeige" id="anzeige-rueckf">🔙 Rückfahrlicht</div>
+</div>
+  
+  <section class="steuerung">
+    <h2>Schalter</h2>
+    <div class="schalter-gruppe">
+      <button onclick="toggleTFL()">Tagfahrlicht</button>
+      <button onclick="toggleAbblend()">Abblendlicht</button>
+      <button onclick="toggleFern()">Fernlicht</button>
+      <button onclick="toggleNebel()">Nebelscheinwerfer</button>
+      <button onclick="toggleInnen()">Innenraumlicht</button>
+      <h3>Blinker</h3>
+    <button onclick="starteBlinken('links')">Blinker links</button>
+    <button onclick="starteBlinken('rechts')">Blinker rechts</button>
+    <button onclick="starteBlinken('warn')">Warnblinker</button>
+    </div>
+  </section>
+
+  <section class="schalter">
+    <h2>Weitere Aktionen</h2>
+    <div class="schalter-gruppe">
+      <button onclick="drueckeBremse()">Bremse drücken</button>
+      <button onclick="loeseBremse()">Bremse lösen</button>
+      <button onclick="gangEinlegen()">Rückwärtsgang einlegen</button>
+      <button onclick="gangAuslegen()">Rückwärtsgang auslegen</button>
+    </div>
+  </section>
+
+  <section class="tuersteuerung">
+    <h2>Türen</h2>
+    <div class="schalter-gruppe">
+      <button onclick="tuerStatus('links', true)">Tür links öffnen</button>
+      <button onclick="tuerStatus('links', false)">Tür links schließen</button>
+      <button onclick="tuerStatus('rechts', true)">Tür rechts öffnen</button>
+      <button onclick="tuerStatus('rechts', false)">Tür rechts schließen</button>
+    </div>
+  </section>
+
+  <section class="status">
+    <h2>Statusausgabe</h2>
+    <pre id="log"></pre>
+  </section>
+
+<script src="EventEmitter.js"></script>
+<script src="kabelbaum.js"></script>
+<script src="steuergeraet.js"></script>
+<script src="simulation.js"></script>
+</body>
+</html>
